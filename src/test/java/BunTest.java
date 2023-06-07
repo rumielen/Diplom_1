@@ -20,7 +20,13 @@ public class BunTest {
         return new Object[][] {
                 {"Ржаная", 90},
                 {"", 90},
-                {"Лакомка", 0},
+                {null, 90},
+                {"&*Ржаная", 90},
+                {"РжанаяРжанаяРжанаяРжанаяРжанаяРжанаяРжанаяРжанаяРжанаяРжаная", 90},
+                {"Ржаная", 0},
+                {"Ржаная", -0.01f},
+                {"Ржаная", 0.01f},
+                {"Ржаная", 999999.99f},
         };
     }
 
@@ -33,7 +39,7 @@ public class BunTest {
         assertEquals(expectedName, actualName);
     }
 
-    //getPrice()
+
     @Test
     public void getPriceReturnCorrectPrice() {
 

@@ -15,7 +15,6 @@ import java.util.List;
 
 
 public class BurgerTest {
-    //setBuns
 
     @Test
     public void setBunsCorrectlySet() {
@@ -29,7 +28,7 @@ public class BurgerTest {
     @Mock
     private Ingredient ingredient;
 
-    //addIngredient
+
     @Test
     public void addIngredientCorrectlyAdd() {
         List<Ingredient> ingredients = new ArrayList<>();
@@ -41,7 +40,7 @@ public class BurgerTest {
         Assert.assertEquals(ingredient, burger.ingredients.get(0));
 
     }
-    //remove
+
     @Test
     public void removeIngredientCorrectlyRemove() {
 
@@ -57,7 +56,7 @@ public class BurgerTest {
         Assert.assertEquals(ogurchik, burger.ingredients.get(0));
 
     }
-    //moveIngredient
+
     @Test
     public void moveIngredientCorrectMove() {
 
@@ -77,7 +76,7 @@ public class BurgerTest {
         Assert.assertEquals(ketchup, burger.ingredients.get(0));
     }
 
-    //getPrice
+
     @Test
     public void getPriceCorrectGetting() {
 
@@ -96,7 +95,7 @@ public class BurgerTest {
 
     }
 
-    //getReceipt
+
     @Test
     public void getReceiptCorrectGetting() {
         Bun bun = Mockito.mock(Bun.class);

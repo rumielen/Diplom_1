@@ -10,14 +10,12 @@ import static praktikum.IngredientType.SAUCE;
 @RunWith(MockitoJUnitRunner.class)
 public class IngredientTest {
 
-    //getPrice
     @Test
     public void getPriceReturnCorrectPrice() {
         Ingredient ingredient = new Ingredient(IngredientType.FILLING, "Cucumber", 10.0f);
         Assert.assertEquals(10.0f, ingredient.getPrice(), 0.0f);
     }
 
-    //getName
     @Test
     public void getNameReturnCorrectName() {
         Ingredient ingredient = new Ingredient(SAUCE, "ketchup", 10.0f);
@@ -26,7 +24,6 @@ public class IngredientTest {
         Assert.assertEquals(expectedName, actualName);
 
     }
-    //getType
     @Test
     public void getTypeReturnCorrectType() {
         Ingredient ingredient = new Ingredient(SAUCE, "ketchup", 10.0f);
